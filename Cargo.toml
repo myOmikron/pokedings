@@ -1,0 +1,36 @@
+[package]
+name = "pokedings"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+license = "MPL-2.0"
+authors = ["Niklas Pfister <git@omikron.dev>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# game engine
+bevy = { version = "~0.11", features = ["dynamic_linking", "wayland"] }
+# debug inspector
+bevy-inspector-egui = { version = "~0.19" }
+# Better asset loading
+bevy_asset_loader = { version = "~0.17", features = ["2d"] }
+# tilemap plugin
+bevy_ecs_tilemap = { version = "~0.11" }
+# tiled file loader
+tiled = { version = "~0.11" }
+# 2d physics for bevy
+bevy_rapier2d = { version = "~0.22", features = ["debug-render-2d", "simd-stable"] }
+
+# Error management
+anyhow = { version = "~1" }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+# Improves performance of rapier significantly
+codegen-units = 1
