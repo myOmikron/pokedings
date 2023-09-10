@@ -29,7 +29,7 @@ enum GameState {
 
 fn startup(mut commands: Commands, asset_server: Res<AssetServer>) {
     // Setup map
-    let map_handle: Handle<TiledMap> = asset_server.load("maps/test.tmx");
+    let map_handle: Handle<TiledMap> = asset_server.load("maps/tutorial.tmx");
     commands.spawn(TiledMapBundle {
         tiled_map: map_handle,
         ..Default::default()
@@ -44,7 +44,7 @@ fn main() {
                     title: String::from("Pokédings"),
                     resizable: false,
                     present_mode: PresentMode::AutoVsync,
-                    resolution: WindowResolution::new(1280.0, 720.0),
+                    resolution: WindowResolution::new(1280.0, 800.0),
                     ..Default::default()
                 }),
                 ..default()
