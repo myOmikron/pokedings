@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="1">
+ <tileset firstgid="1" name="grassland_main" tilewidth="32" tileheight="32" tilecount="2816" columns="64">
+  <image source="../graphics/tiles/grassland/main.png" width="2048" height="1408"/>
+ </tileset>
+ <tileset firstgid="2817" name="grassland_decorative" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../graphics/tiles/grassland/decorative.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="3841" name="camp_graves" tilewidth="32" tileheight="32" tilecount="480" columns="32">
+  <image source="../graphics/tiles/campfire_graves/camp_graves.png" width="1024" height="480"/>
+ </tileset>
+ <tileset firstgid="4321" name="houses_outside" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../graphics/tiles/houses/houses_outside.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="5345" name="houses_outside_shadows" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../graphics/tiles/houses/houses_outside_shadows.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="6369" name="windmill_outside" tilewidth="32" tileheight="32" tilecount="576" columns="24">
+  <image source="../graphics/tiles/windmill/mill_outside.png" width="768" height="768"/>
+ </tileset>
+ <layer id="5" name="grass" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   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
+  </data>
+ </layer>
+ <layer id="11" name="ways" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAmx0NAIKHGSGQN+mw3ZBSVdWJ4NZso///ivYeteHubk3vFqk1/TRiHVKJx6gLp0hD8jSMgWjv8F0wVvcmJkXNrQIAY8BAzRWUCpo8fKBM5zULJYTWK+TVoWSdRcGp64t8D3S+7zGf5csu4ZvfdoCBoPCWCqUOcIIyEkhw1Q31DTzguxFVH6qdf029qNS0ZqL7CJUDi78MLZD3WPXdIIoTnp9DdXTn5n0pbonTqiRnUWKsI/W4OM19Pr9jKw+rOz5fpM+6ximeY02mncmujIqgZVEwAKr+KOSRbOXnEjVLy/RlJ88sVfF5kUxtam79zHIFVld9s0AxEjc4MporzvSk1vN5OxezmDRn9FM+6n7L1stf4+Ysds4Z/ZQf73p5LoicFsF/9cyjykm4LkWG549dsI55XF1s7KBGlwbx6A1JSCH1KUz6rIHjHtmvQ24d6qHbjFsiC8wklI+KPxw3TnKJLIyIS6jfcbVR6DLMkJs4degz338JB0PuPk9CQKkvd+ZRgVo2uhOtLMMVt9jtFWOSR5sh4cpyYaqEUEf+LsRJqEQQaqAFexAB
+  </data>
+ </layer>
+ <layer id="16" name="way-posts" width="100" height="100" opacity="0.6">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAmyUBAHgAeAoAAHkKALgKAAC58QAFAMMV8Nhi0AfEyaVqQ6AaScPurg==
+  </data>
+ </layer>
+ <layer id="17" name="lakes" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm9UDAMJFEB3AJcMY/n+wgd1sa/w/cLvtTTT+/wshaxH+WV0yBcmRH09MR+pAUPHWw/XSQw9hqAeUZ3iFR3jNY255gPc854sBEiBgghfXMXUMD/A9Vv8dUMu+y1aYo+LXuPyEWwT3jdS6hIPHG/ZGpQ8vS8e7jMraVQM1ya6E
+  </data>
+ </layer>
+ <layer id="15" name="cliffs" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm/0DABLFDRewF9IYDcWakuQSkyQJlCQBmQgKK+VOAWMY4O3pDUGKlViIdTiFp1x55Ale4Bn8qGM1FmMtHjIZoHBJGWVbxhCDytkNPR2fpDqA2v5Jugx6jUnToKk4P70Nb7Ry8oq5qHO9zY/gxmtWrphbdb61KKONVlOumtpdFbyJvaI=
+  </data>
+ </layer>
+ <layer id="14" name="ways-stairs" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm0UCAIQCAJ8IAADhCAAAowgAqwgAAKwIAACt6wgAAOwIAADtKwkAACwJAAAtCQgALRrwkM8/+YcEKBgEKiIE9RBOLvUIAtUJLXbHBg==
+  </data>
+ </layer>
+ <layer id="9" name="fences" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm0UBAGgAvQk5CjoKfAkAADk6CQAFGNjwMwCwu3P6JsQ7DDsEf9gpyNzhHRs=
+  </data>
+ </layer>
+ <layer id="10" name="trees" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm4UIALKPKS0wVTKMAaPAKAAj3vlR+bYfAIWIDl+w8kPt/T8MjPIDA4M7+loKKpmv5S91TwGTwithTQyvhYIXwWtAZBWyKq1IRG/oCVmsKlYUqwmdl/Nw3s2zkVhFrCBWDyxv5am8lIeyEF4HLwPlsGqYx+t4HG/j6Bm9Ip/X83jeDsx7eS6vZQm8Al4ApUd6IO8j6AG9n5pH82aezIs5eSav5JG8kdN4GQ/jXQwhIOACi8vAA/0SPCDlKfKvk6sB9XH59WurmG52VE2T/APPsFIPTlL6OK+oZwWg9NNMQl3kAC5HPw21wNDM4kalJhGHLAA4OfUDXKP+a5QE7lIInpA+zyO9V5APdeWbrC56UiuvhhdC
+  </data>
+ </layer>
+ <layer id="7" name="houses-walls" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm2UGAKIKHipwazKMARjECSK0wAAC0oT/FhgAkIbPNUAYehBt3fP/d8//Y/5Db/VphhQbT+NlPAyLV/Eo3sQU8Z7nvEYC4j08h9cAkFlhGN7CU3gJFytpFa0ggjfwBF7As3JWzeVZXuVRJk/yIg9yj+eYXtIrekEXwuvgZfAqGBmgkEwogQQS+hjAAqKYDD2plfEID7kqwLFUQZy/vPLiQYWTPhtmDp5J1fnpBz83zyypFNLIsFSt5VxGlklVAS9VhyDVqLgHOJlK/KqGgWCnJg==
+  </data>
+ </layer>
+ <layer id="8" name="houses-doors" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAmx0CAOgABBcAJAUTAAAGEwAlEwAAJt4aAADfGgD2GgAA9wogMIPKPTkXDxAnqdqwat1VgDhZ1YZVS617YJykXkWpQ0Gwjys=
+  </data>
+ </layer>
+ <layer id="13" name="houses-windows" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm10BAJgAZRIAAGYS+hoAAPsaAGISAABjBgDBGPCAepesammgsmigwApc3By7uwI=
+  </data>
+ </layer>
+ <layer id="6" name="houses-roof" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAm50IAOZQLi1gbdIa3ToQ3G40E96PJoj1GQaAAdilrB8GwNaDxxuEcgAap/8pmJXdY4ylC6ciACEAIgCbJ+HWuXFum4Gb5pa5YVrA7XKz3CqnqdIUaapKjaZEU6EBnwIDmF1mllnlDj6DK/gITK/Si/SqrtFL9Aq9SB5uoNtnbNPxcXwbn0bGh/FdfBYVH8U38Ul8ER+EwEwzy8wwDR/DQqfPVH0pKN+JyVfiMAPNPjPPjXwiX8gH8n18HgizzoxzICCAg3I+0Zh4gDc5pQdjjUTCBDwnU3pQrOH8bqoNzo8H9WMSRiuA86hvDfFUBs6Po7RYO1I3VQkuMHl+ftTKu78CUj9A9QOkfn+rCuCk+v286kAcPrIB
+  </data>
+ </layer>
+ <layer id="12" name="houses-roof-2" width="100" height="100">
+  <data encoding="base64" compression="zstd">
+   KLUv/WBAmx0DAHQDAP8QAB8RAOEQAADiEAAA4ysTAABVEQAAVgERAAACEQAAA0sTAAB1EQAAdiERAAAiEQAAI2sTAA0AQRzwUAdUACDUzZJV4IhTY48P3ORSZ48P3OVSZxcfOaAORaAOSMXurg==
+  </data>
+ </layer>
+</map>
