@@ -4,11 +4,14 @@ use bevy::input::Input;
 use bevy::math::Vec3;
 use bevy::prelude::*;
 use bevy::time::Time;
-use bevy_rapier2d::prelude::{
-    ActiveEvents, Collider, CollidingEntities, GravityScale, KinematicCharacterController,
-    RigidBody, Sensor,
-};
-use bevy_rapier2d::rapier::prelude::ColliderType;
+use bevy_rapier2d::prelude::CollidingEntities;
+
+#[derive(States, Eq, PartialEq, Debug, Default, Hash, Clone)]
+pub enum UserState {
+    #[default]
+    Running,
+    Inventory,
+}
 
 #[derive(Component, Deref, DerefMut)]
 pub struct AnimationTimer(Timer);
@@ -31,8 +34,12 @@ pub struct PlayerPlugin;
 
 impl Plugin for PlayerPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(Startup, startup)
-            .add_systems(Update, move_and_animate);
+        app.add_state::<UserState>()
+            .add_systems(Startup, startup)
+            .add_systems(
+                Update,
+                (move_and_animate, open_inventory).run_if(in_state(UserState::Running)),
+            );
     }
 }
 
@@ -62,6 +69,18 @@ pub fn startup(
         AnimationTimer(Timer::from_seconds(0.1, TimerMode::Repeating)),
         Name::new("Player"),
     ));
+}
+
+pub fn open_inventory(
+    keyboard_input: Res<Input<KeyCode>>,
+    player: Query<&Player>,
+    mut app_state: ResMut<NextState<UserState>>,
+) {
+    if let Ok(player) = player.get_single() {
+        if keyboard_input.pressed(KeyCode::I) {
+            app_state.set(UserState::Inventory);
+        }
+    }
 }
 
 pub fn move_and_animate(
