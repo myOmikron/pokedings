@@ -106,9 +106,22 @@ pub fn move_and_animate(
         };
 
         for (mut timer, mut sprite) in &mut animation {
-            timer.tick(time.delta());
-            if timer.just_finished() {
-                if let Ok(player) = player.get_single() {
+            if let Ok(player) = player.get_single() {
+                // If the player moves to another direction, set it before
+                // the timer to don't be lagging behind the movement
+                if let Some(x) = &direction {
+                    if *x != player.last_direction {
+                        sprite.index = match x {
+                            Direction::Up => 12,
+                            Direction::Down => 0,
+                            Direction::Left => 4,
+                            Direction::Right => 8,
+                        }
+                    }
+                }
+
+                timer.tick(time.delta());
+                if timer.just_finished() {
                     sprite.index = match &direction {
                         None => match player.last_direction {
                             Direction::Up => 12,
